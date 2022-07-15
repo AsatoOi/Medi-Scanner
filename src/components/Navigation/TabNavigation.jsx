@@ -1,14 +1,14 @@
-import React from "react";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { SafeAreaView, Image, View } from "react-native";
+import React from 'react';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { SafeAreaView, Image, View } from 'react-native';
 
-import CameraButton1 from "../../../assets/images/camera-button-1.png";
-import HomeIcon from "../../../assets/images/home-icon.png";
-import FavoriteIcon from "../../../assets/images/favorite-icon.png";
-import { CameraScreen } from "../screens/CameraScreen";
-import { FavoritesScreen } from "../screens/FavoritesScreen";
-import { HomeScreen } from "../screens/HomeScreen";
-import { theme } from "../../style/theme";
+import CameraButton1 from '../../../assets/images/camera-button-1.png';
+import HomeIcon from '../../../assets/images/home-icon.png';
+import FavoriteIcon from '../../../assets/images/favorite-icon.png';
+import { CameraScreen } from '../screens/CameraScreen';
+import { FavoritesScreen } from '../screens/FavoritesScreen';
+import { HomeScreen } from '../screens/HomeScreen';
+import { theme } from '../../style/theme';
 
 const Tab = createBottomTabNavigator();
 
@@ -20,11 +20,11 @@ export const TabNavigation = () => {
         headerShown: false,
         tabBarStyle: {
           showLabel: false,
-          position: "absolute",
+          position: 'absolute',
           borderTopRightRadius: 20,
           borderTopLeftRadius: 20,
           height: 113,
-          shadowColor: "black",
+          shadowColor: 'black',
           shadowOpacity: 0.07,
           shadowRadius: 15,
           shadowOffset: { width: 0, height: -10 },
@@ -36,9 +36,9 @@ export const TabNavigation = () => {
         name="Home"
         component={HomeScreen}
         options={{
-          tabBarLabel: "Home",
+          tabBarLabel: 'Home',
           tabBarIcon: ({ focused }) => (
-            <SafeAreaView style={{ position: "absolute", top: "35%" }}>
+            <SafeAreaView style={{ position: 'absolute', top: '35%' }}>
               <Image
                 source={HomeIcon}
                 style={{
@@ -55,7 +55,7 @@ export const TabNavigation = () => {
         name="Camera"
         component={CameraScreen}
         options={{
-          tabBarLabel: "Camera",
+          tabBarLabel: 'Camera',
           tabBarIcon: () => (
             <SafeAreaView>
               <View
@@ -63,9 +63,9 @@ export const TabNavigation = () => {
                   width: 56,
                   height: 56,
                   backgroundColor: theme.mc,
-                  borderRadius: "50%",
-                  justifyContent: "center",
-                  alignItems: "center",
+                  borderRadius: '50%',
+                  justifyContent: 'center',
+                  alignItems: 'center',
                 }}
               >
                 <Image
@@ -84,9 +84,9 @@ export const TabNavigation = () => {
         name="Favorites"
         component={FavoritesScreen}
         options={{
-          tabBarLabel: "Favorites",
+          tabBarLabel: 'Favorites',
           tabBarIcon: ({ focused }) => (
-            <SafeAreaView style={{ position: "absolute", top: "35%" }}>
+            <SafeAreaView style={{ position: 'absolute', top: '35%' }}>
               <Image
                 source={FavoriteIcon}
                 style={{
